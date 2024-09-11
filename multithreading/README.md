@@ -28,3 +28,12 @@ real    0m20.359s
 user    0m0.000s
 sys     0m0.015s
 ```
+
+#### Second case
+
+The goal is to open another thread that manages the loop within the ```/slow-page``` endpoint. So the server will be able to take in charge other requestes. In contrast with the previous case, you'll now be able to hit ```/fast-page``` eventhough ```/fast-page``` hasn't responded yet.
+
+##### Setup
+ 
+First from *worker_threads* I've imported *parentPort*, which exposes a method called *postMessage*. **This method allows to pass data through the threads**.
+I moved the slowLogic in a new file that I called ```worker.js``` and passed the result to ```parentPort.postMessage(data)```.
