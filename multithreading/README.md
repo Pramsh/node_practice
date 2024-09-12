@@ -14,7 +14,7 @@ After each step you may come back here if you don't remember the other branch na
 
 
 #### First case 
-
+###### branch: first-case
 Run first the slow endpoint and then the fast one. When the server is handled by a single thread it won't be able to respond to any other requestes till the first one is fulfilled.
 
 Fast page example:
@@ -36,7 +36,7 @@ sys     0m0.015s
 ```
 
 #### Second case
-
+###### branch: second-case 
 The goal is to open another thread that manages the loop within the ```/slow-page``` endpoint. So the server will be able to take in charge other requestes. In contrast with the previous case, you'll now be able to hit ```/fast-page``` eventhough ```/fast-page``` hasn't responded yet.
 
 ##### Setup
@@ -46,7 +46,7 @@ I moved the slowLogic in a new file that I called ```worker.js``` and passed the
 
 
 #### Third case
-
+###### branch: master
 What we want to achieve now is to spend part of the computation power of our pc to create N threads.
 
 In linux you can see how many processes might be open concurrently typing ```nproc```. In my case the returned value is 12.
