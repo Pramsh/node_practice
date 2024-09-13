@@ -1,6 +1,6 @@
 ## Introduction
 
-Since I was recently working a web scraper to test out my python skills and I needed to delve deeper in some optimization topics. I though I want apply the multithreading technic on a Nodejs environment, for those task that require an intense CPU workload.
+Since I was recently working on a [web scraper](https://github.com/Pramsh/CarScraper/blob/master/README.md) to test out my python skills and I needed to delve deeper in some optimization topics. I though I want apply the multithreading technic on a Nodejs environment, for those task that require an intense CPU workload.
 
 #### Description
 I set up an ExpressJs server and exposed two endpoints on my localhost, a fast endpoint and a slow one:
